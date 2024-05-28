@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="container">
+    <h1>Student Information Management System</h1>
+        <div class="login-fail">
+            <p>Incorrect Password</p>
+        </div>
+    <form action="/login" method="post">
+        <article>
+        <label for="userid">Username: </label>
+        <input type="text" name="userid">
+        </article>
+        <article>
+            <label for="password">Password</label>
+            <input type="password" name="password">
+        </article>
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<%- include('partials/footer.ejs'); -%>
+

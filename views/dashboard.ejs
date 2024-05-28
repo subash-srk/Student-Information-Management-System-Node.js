@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs'); -%>
+<div class="row mb-3">
+  <div class="col-md-2">
+    <%- include('partials/sidebar.ejs'); -%>
+  </div>
+  <div class="col-md-10">
+    <div class="main-right">
+        <h1 class="main-title"><%= institution.insname %>
+          <span class="edit-btn" style="font-size: 12px;">
+            <a href="/settings">
+              <%- include('../public/assets/pencil-square.svg'); -%> 
+            <a>
+          </span>
+        </h1>
+        <div class="col-lg-6 mx-auto">
+          <p class="lead mb-4"><%= institution.insaddress %></p>
+        </div>
+    </div>
+  </div> 
+</div>
+<%- include('partials/footer.ejs'); -%>
+

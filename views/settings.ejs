@@ -1,0 +1,27 @@
+<%- include('partials/header.ejs'); -%>
+<div class="row mb-3">
+  <div class="col-md-2">
+    <%- include('partials/sidebar.ejs'); -%>
+  </div>
+  <div class="col-md-10">
+    <div class="action-right">
+    <h2 class="">Settings</h2>
+    <form action="/settings" method="post">
+        <article>
+            <label for="regno">Institution Name: </label>
+            <input type="text" name="insname" placeholder="" value="<%=institution.insname  %>">
+        </article>
+        <article>
+        <label for="address">Address: </label>
+        <textarea name="insaddress" placeholder="" rows="3"><%= institution.insaddress  %></textarea>
+        </article>
+        <article>
+        <label class="hide-on-mobile"></label>
+        <input type="submit" value="Submit" >
+        </article>
+    </form>
+  </div>
+</div> 
+</div>
+<%- include('partials/footer.ejs'); -%>
+

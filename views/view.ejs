@@ -1,0 +1,40 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="row mb-3">
+    <div class="col-md-3">
+        <%- include('partials/sidebar.ejs'); -%>
+    </div>
+    <div class="col-md-9">
+        <div class="action-right">
+        <h2 class="page-title">Student -  <%= student.name %> </h2>
+        <div class="ctrl-forms">
+            <form action="/edit" method="post">
+                <button class="btn btn-outline-secondary" type="submit" name="regno" value="<%= student.regno %>">
+                <%- include('../public/assets/pencil-square.svg'); -%> 
+                Edit 
+                </button>
+            </form>
+            <form action="/delete" method="post">
+                <button class="btn btn-outline-secondary" type="submit" name="regno" value="<%= student.regno %>">
+                <%- include('../public/assets/trash3.svg'); -%> 
+                Delete 
+                </button>
+            </form>
+        </div>
+        <div class="view py-5">
+            <article><img src="<%= student.photo %>" alt=""></article>
+            <article><h6>Register Number: </h6><p><%= student.regno %></p></article>
+            <article><h6>Name: </h6><p><%= student.name %></p></article>
+            <article><h6>Department: </h6><p><%= student.dept %></p></article>
+            <article><h6>Father's Name: </h6><p><%= student.fname %></p></article>
+            <article><h6>Date of Birth: </h6><p><%= student.dob.toLocaleDateString() %></p></article>
+            <article><h6>Gender: </h6><p><%= student.gender %></p></article>
+            <article><h6>Contact Number: </h6><p><%= student.phno %></p></article>
+            <article><h6>Email Address: </h6><p><%= student.email %></p></article>
+            <article><h6>Address: </h6><p><%= student.address %></p></article>
+        </div>
+    </div>
+</div>
+</div>
+
+<%- include('partials/footer.ejs'); -%>

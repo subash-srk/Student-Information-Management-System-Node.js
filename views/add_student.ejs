@@ -1,0 +1,63 @@
+<%- include('partials/header.ejs'); -%>
+<div class="row mb-3">
+    <div class="col-md-3">
+        <%- include('partials/sidebar.ejs'); -%>
+    </div>
+    <div class="col-md-9">
+    <div class="action-right">
+    <h2 class="">New Student</h2>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <article>
+            <label for="regno">Register No.: </label>
+            <input type="text" name="regno" placeholder="">
+        </article>
+        <article>
+            <label for="studname">Student Name: </label>
+            <input type="text" name="studname" placeholder="">
+        </article>
+        <article>
+            <label for="author">Department: </label>
+            <input type="text" name="dept" placeholder="">
+        </article>
+        <article>
+        <label for="fname">Father Name: </label>
+        <input type="text" name="fname" placeholder="">
+        </article>
+        <article>
+        <label for="dob">Date of Birth: </label>
+        <input type="date" name="dob" placeholder="">
+        </article>
+        <article>
+        <label for="gender">Gender: </label>
+        <select name="gender">
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+        </select>
+        </article>
+        <article>
+        <label for="phno">Mobile No.: </label>
+        <input type="text" name="phno" placeholder="">
+        </article>
+        <article>
+        <label for="email">Email: </label>
+        <input type="text" name="email" placeholder="">
+        </article>
+        <article>
+        <label for="address">Address: </label>
+        <textarea name="address" placeholder="" rows="3"></textarea>
+        <br />
+        </article>
+        <article>
+        <label for="photo">Student Image:</label>
+        <input type="file" name="photo" accept="image/png, image/jpeg" />
+        </article>
+        <article>
+        <label class="hide-on-mobile"></label>
+        <input type="submit" value="Submit" >
+    </form>
+    <form action="/" method="get" class="cancel-btn"><input type="submit" value="Cancel" ></form>
+</article>
+</div>
+</div>
+
+<%- include('partials/footer.ejs'); -%>

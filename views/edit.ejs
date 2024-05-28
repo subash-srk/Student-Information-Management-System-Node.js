@@ -1,0 +1,65 @@
+<%- include('partials/header.ejs'); -%>
+<div class="row mb-3">
+    <div class="col-md-3">
+        <%- include('partials/sidebar.ejs'); -%>
+    </div>
+
+    <div class="col-md-9">
+
+    <div class="action-right">
+        <h2 class="">Edit Student</h2>
+        <div class="ctrl-forms">
+        <form action="/update" method="post">
+        <article>
+            <label for="regno">Register No.: </label>
+            <input type="text" name="regno" value="<%= student.regno %>">
+        </article>
+        <article>
+            <label for="studname">Student Name: </label>
+            <input type="text" name="studname" value="<%= student.name %>">
+        </article>
+        <article>
+            <label for="author">Department: </label>
+            <input type="text" name="dept" value="<%= student.dept %>">
+        </article>
+        <article>
+            <label for="fname">Father Name: </label>
+            <input type="text" name="fname" value="<%= student.fname %>">
+        </article>
+        <article>
+            <label for="dob">Date of Birth: </label>
+            <input type="date" name="dob" value="<%= student.dob %>">
+        </article>
+        <article>
+            <label for="gender">Gender: </label>
+            <select name="gender" value="<%= student.gender %>">
+                <option value="" selected>(Select)</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+            </select>
+        </article>
+        <article>
+            <label for="phno">Mobile No.: </label>
+            <input type="text" name="phno" value="<%= student.phno %>">
+        </article>
+        <article>
+            <label for="email">Email: </label>
+            <input type="text" name="email" value="<%= student.email %>">
+        </article>
+        <article>
+            <label for="address">Address: </label>
+            <textarea name="address" rows="3"><%= student.address %></textarea>
+            <br />
+        </article>
+        <article>
+            <label class="hide-on-mobile"></label>
+            <input type="submit" value="Submit" ><br>
+        </form>
+        <form action="/studentlist" method="get"><input type="submit" value="Cancel" ></form>
+        </article>
+        </div>
+    </div>
+</div>
+
+
+<%- include('partials/footer.ejs'); -%>

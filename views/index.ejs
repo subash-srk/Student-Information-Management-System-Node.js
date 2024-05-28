@@ -1,0 +1,22 @@
+<%- include('partials/header.ejs'); -%>
+<div class="main-bg">
+<div class="row mb-3">
+  <div class="col-md-2">
+    <%- include('partials/sidebar.ejs'); -%>
+  </div>
+  <div class="col-md-10">
+    <div class="main-right">
+      <h1 class="main-title">Student Information Management System</h1>
+      <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Graphical interface for maintaining student information</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <button type="button" class="btn btn-primary btn-lg px-4 gap-3" onclick="location.href='/settings'">Institution Setup</button>
+          <button type="button" class="btn btn-outline-secondary btn-lg px-4" onclick="location.href='/dashboard'">Dashboard</button>
+      </div>
+    </div>
+  </div>
+  </div> 
+</div>
+</div>
+<%- include('partials/footer.ejs'); -%>
+

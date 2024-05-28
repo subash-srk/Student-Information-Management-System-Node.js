@@ -1,0 +1,62 @@
+<a class="menu-button" onclick=showSidebar()>
+  <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 96 960 960" width="35">
+    <path d="M120 816v-60h720v60H120Zm0-210v-60h720v60H120Zm0-210v-60h720v60H120Z"/>
+  </svg>
+</a>      
+
+<div class="sidebar">
+<!-- <div class="d-flex flex-column flex-shrink-0 p-3 text-bg-dark" style="height: 700px;"> -->
+  <a class="close-button" onclick=hideSidebar()>
+    <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-x-square-fill" viewBox="0 0 16 16">
+      <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zm3.354 4.646L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 1 1 .708-.708"/>
+    </svg>
+  </a> 
+    <!-- <a href="/" class="sidebar-title">
+    <h3>SIMS</h3>
+    </a> -->
+    <hr>
+    <ul>
+      <li class="nav-item">
+        <a href="/">
+          Home
+        </a>
+      </li>
+      <li>
+        <a href="/dashboard">
+          Dashboard
+        </a>
+      </li>
+      <li>
+        <a href="/studentlist">
+          Student List
+        </a>
+      </li>
+      <li>
+        <a href="/add">
+          New Student
+        </a>
+      </li>
+      <li>
+        <a href="/settings">
+          Settings
+        </a>
+      </li>
+    </ul>
+    <hr>
+</div>
+
+<script>
+  function showSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.visibility = 'visible'
+    const close_btn = document.querySelector('.close-button')
+    close_btn.style.visibility = 'visible'
+    
+  }
+  function hideSidebar(){
+    const sidebar = document.querySelector('.sidebar')
+    sidebar.style.visibility = 'hidden'
+    const close_btn = document.querySelector('.close-button')
+    close_btn.style.visibility = 'hidden'
+  }
+</script>

@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan+SC&display=swap');
+body{
+    min-height: 100vh;
+}
+
+.main-right{
+    padding: 5%;
+    margin: 10% 0%;
+    text-align: center;
+}
+.action-right{
+    padding: 5%;
+}
+
+.edit-inputs article input{
+    width: 100%;
+}
+
+
+/* .main-bg{
+    
+} */
+
+.main-title{
+    font-size: 45px;
+    font-weight: 700;
+    padding: 10px;  
+}
+.page-title{
+    text-align: center;
+}
+
+.sidebar{
+    width: 250px;
+    position: fixed; 
+    z-index: 1; 
+    top: 0; 
+    height: 100vh;
+    background: rgb(42, 39, 39);
+    padding: 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.sidebar ul{
+    padding-top: 60px;
+    list-style: none;
+}
+.sidebar li{
+    padding: 10px;
+    height: 50px;
+}
+.sidebar li a{
+    height: 35px;
+    font-size: 1.1rem;
+    /* padding: 0 20px; */
+    padding-left: 20px;
+    padding-right: 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    /* border: 1px solid wheat; */
+    border-radius: 5px;
+}
+
+/* .sidebar-title{
+    margin-left: 20px;
+    color: white;
+    text-decoration: none;
+} */
+
+.menu-button{
+    display: none;
+    margin: 10px;
+}
+.close-button{
+    visibility: hidden;
+    margin-top: 10px;
+    margin-left: 200px;
+    color: white;
+}
+
+@media(max-width: 800px){
+    .sidebar{
+      visibility: hidden;
+    }
+    .menu-button{
+      display: block;
+    }
+    
+  }
+
+li a:hover{
+    background-color: #0066f6;
+}
+
+article{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;   
+}
+article h6{
+    width: 150px;
+}
+
+form{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+input, select{
+    width: 440px;
+    height: 40px;
+    margin: 10px;
+}
+textarea{
+    width: 440px;
+    margin: 10px;
+}
+label {
+    width: 150px;
+    margin: 10px;
+}
+
+.ctrl-forms{
+    display: flex;
+    flex-wrap: wrap;
+}
+.ctrl-forms button{
+    width: 95px;
+    margin-right: 5px;
+    margin-top: 5px;
+}
+
+input[type="submit"]{
+    width: 210px;
+}
+
+.login-fail{
+    margin: 10px;
+    margin-top: 30px;
+    border: 1px solid rgb(79, 77, 77);
+    border-radius: 5px;
+    padding: 2px;
+    background: rgba(255, 0, 0, 0.899);
+    color: white;
+    font-weight: 500;
+}
+.view article img{
+    width: 200px;
+    margin-bottom: 40px;
+}
+
+@media(max-width: 800px){
+    .sidebar{
+      visibility: hidden;
+    }
+    .menu-button{
+      display: block;
+    }
+    .hide-on-mobile{
+        display: none;
+    }
+    
+  }

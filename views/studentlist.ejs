@@ -1,0 +1,69 @@
+<%- include('partials/header.ejs'); -%>
+
+<div class="row mb-3">
+  <div class="col-md-2">
+      <%- include('partials/sidebar.ejs'); -%>
+  </div>
+
+<div class="col-md-10">
+  <% if (message.length > 0){ %>
+    <div class="alert alert-success m-4" id="success-message" style="display: block;">
+      <%= message %>
+    </div>
+  <% } %>
+  <div class="action-right">
+  <h2>Student List</h2>
+          <table class="table table-striped">
+            <thead>
+            <tr>
+              <th scope="col">Reg. No</th>
+              <th scope="col">Name</th>
+              <th class="hide-on-mobile">Department</th>
+              <th scope="col">Action </th>
+            </tr>
+            </thead>
+            <tbody>
+            <% students.forEach(student => { %>
+            <tr>
+              <td scope="row"><%= student.regno %></td>
+              <td><%= student.name %></td>
+              <td class="hide-on-mobile"><%= student.dept %></td>
+              <td>
+                <div class="ctrl-forms">
+                    <form action="/view" method="post">
+                        <button class="btn btn-outline-secondary" type="submit" name="regno" value="<%= student.regno %>">
+                          <%- include('../public/assets/eye.svg'); -%> 
+                          View 
+                        </button>
+                    </form>
+                    <form action="/edit" method="post">
+                        <button class="btn btn-outline-secondary" type="submit" name="regno" value="<%= student.regno %>">
+                          <%- include('../public/assets/pencil-square.svg'); -%> 
+                          Edit 
+                        </button>
+                    </form>
+                    <form action="/delete" id="#delete" method="post">
+                        <button class="btn btn-outline-secondary" type="submit" name="regno" value="<%= student.regno %>" onclick=deleteConfirm()>
+                          <%- include('../public/assets/trash3.svg'); -%> 
+                          Delete 
+                        </button>
+                    </form>
+                </div>
+              </td>
+            </tr>
+            <%  }); %>
+            </tbody>
+          </table>     
+</div>
+</div>
+</div>
+
+<script>
+  setTimeout(function() {
+    const alert = document.querySelector('#success-message')
+    alert.style.display = 'none'
+}, 3000); 
+
+</script>
+
+<%- include('partials/footer.ejs'); -%>
