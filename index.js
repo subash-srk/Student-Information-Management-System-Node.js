@@ -7,7 +7,7 @@ import flash from "connect-flash";
 import cookieParser from "cookie-parser";
 import env from "dotenv";
 
-const port = 3000;
+const port = process.env.PORT || 3000;
 const app = express();
 env.config();
 
@@ -27,7 +27,7 @@ app.use(express.static("."));
 app.use(cookieParser());
 
 app.use(session({
-    secret: process.env.SESSION_SECRET,
+    secret: "process.env.SESSION_SECRET",
     cookie: { maxAge: 6000 },
     resave: true,
     saveUninitialized: true
