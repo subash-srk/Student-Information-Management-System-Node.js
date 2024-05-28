@@ -7,7 +7,7 @@ import flash from "connect-flash";
 import cookieParser from "cookie-parser";
 import env from "dotenv";
 
-const port = 3000;
+const port = "https://student-information-management-system-node-js-pfwj.vercel.app/";
 const app = express();
 env.config();
 
