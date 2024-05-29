@@ -3,7 +3,7 @@
 
 [![Tech](https://skillicons.dev/icons?i=nodejs,express,postgres,js,html,css)](https://skillicons.dev)
 
-This project “Student Information Management System” provides us a simple interface for maintenance of student information. It can be used by educational institutes or colleges to maintain the records of students easily. 
+This project “Student Information Management System” provides us a graphical interface for maintenance of student information. It can be used by educational institutes or colleges to maintain the records of students easily. 
 
 ## Installing / Getting started
 
